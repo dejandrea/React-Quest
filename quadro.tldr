@@ -43,6 +43,151 @@
 			"typeName": "pointer"
 		},
 		{
+			"meta": {},
+			"id": "page:rf2PI6fiYOW15mAlguvZU",
+			"name": "Aula 4",
+			"index": "a3swv",
+			"typeName": "page"
+		},
+		{
+			"x": 32.666648864746094,
+			"y": 96.66667175292969,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:h4DE4ayGflyODUF08HHP4",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 758.78125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "{"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "\tid:1,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "\ttitle: \"Criar componente de perfil\","
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "\tdescription:\"Crie um card com informações do peril do user\","
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "\ttechnology:\"React\","
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "\tdifficulty:\"Fácil\","
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "\txp:50,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "\tcompleted:false"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "}"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:rf2PI6fiYOW15mAlguvZU",
+			"index": "a1nTU",
+			"typeName": "shape"
+		},
+		{
 			"x": 149.90660095214844,
 			"y": 130.1948118209839,
 			"z": 1,
@@ -53,10 +198,8 @@
 		{
 			"editingShapeId": null,
 			"croppingShapeId": null,
-			"selectedShapeIds": [
-				"shape:_AAukJn8rakG9mnW4Xof5"
-			],
-			"hoveredShapeId": "shape:_AAukJn8rakG9mnW4Xof5",
+			"selectedShapeIds": [],
+			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -79,12 +222,27 @@
 			"typeName": "instance_page_state"
 		},
 		{
-			"x": 0,
-			"y": 0,
+			"x": 219.8177032470703,
+			"y": -110.80001068115234,
 			"z": 1,
 			"meta": {},
 			"id": "camera:page:bh3SHVP0w1SFezU_XlvTu",
 			"typeName": "camera"
+		},
+		{
+			"editingShapeId": "shape:h4DE4ayGflyODUF08HHP4",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:h4DE4ayGflyODUF08HHP4"
+			],
+			"hoveredShapeId": "shape:h4DE4ayGflyODUF08HHP4",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:rf2PI6fiYOW15mAlguvZU",
+			"pageId": "page:rf2PI6fiYOW15mAlguvZU",
+			"typeName": "instance_page_state"
 		},
 		{
 			"name": "",
@@ -203,6 +361,14 @@
 			"typeName": "shape"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"z": 1,
+			"meta": {},
+			"id": "camera:page:rf2PI6fiYOW15mAlguvZU",
+			"typeName": "camera"
+		},
+		{
 			"meta": {},
 			"id": "page:bh3SHVP0w1SFezU_XlvTu",
 			"name": "Aula 3",
@@ -226,10 +392,7 @@
 		{
 			"followingUserId": null,
 			"opacityForNextShape": 1,
-			"stylesForNextShape": {
-				"tldraw:size": "s",
-				"tldraw:color": "light-violet"
-			},
+			"stylesForNextShape": {},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
@@ -243,8 +406,8 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 996,
-				"h": 702.4000244140625
+				"w": 1006,
+				"h": 566
 			},
 			"insets": [
 				false,
@@ -259,7 +422,7 @@
 			"isChatting": false,
 			"highlightedUserIds": [],
 			"isFocused": true,
-			"devicePixelRatio": 1.25,
+			"devicePixelRatio": 1.5,
 			"isCoarsePointer": false,
 			"isHoveringCanvas": true,
 			"openMenus": [],
@@ -269,7 +432,7 @@
 			"duplicateProps": null,
 			"cameraState": "idle",
 			"id": "instance:instance",
-			"currentPageId": "page:bh3SHVP0w1SFezU_XlvTu",
+			"currentPageId": "page:rf2PI6fiYOW15mAlguvZU",
 			"typeName": "instance"
 		},
 		{
