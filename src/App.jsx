@@ -1,43 +1,11 @@
-import './App.css'
-import Header from './components/Header'
-import Welcome from './components/Welcome'
-import Footer from './components/Footer'
-import ProfileCard from './components/ProfileCard'
-import SummaryCard from './components/SummaryCard'
-import MissionCard from './components/MissionCard'
-
-const summaryData = [
-  {
-    id:1,
-    title: "Missões",
-    value: 5,
-    description: "Desafios Disponíveis"
-  },
-  {
-    id:2,
-    title: "Projetos",
-    value: 3,
-    description: "Projetos Cadastrados"
-  },
-  {
-    id:3,
-    title: "Tecnologias",
-    value: 7,
-    description: "Tecnologias Praticadas"
-  },
-  {
-    id:4,
-    title: "Objetivos",
-    value: 6,
-    description: "Objetivos Estabelecidos"
-  },
-  {
-    id:5,
-    title: "XP",
-    value: 1500,
-    description: "Experiência Acumulada"
-  }
-]
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Welcome from "./components/Welcome";
+import Footer from "./components/Footer";
+import ProfileCard from "./components/ProfileCard";
+import SummaryCard from "./components/SummaryCard";
+import MissionCard from "./components/MissionCard";
 
 const initialMissions = [
   {
@@ -74,12 +42,69 @@ const initialMissions = [
     technology: "Debug",
     difficulty: "Média",
     xp: 80,
-    completed: false,
+    completed: true,
   },
-]
+];
 
-function App(){
-  return(
+function App() {
+  const [missions, setMissions] = useState(initialMissions);
+
+  function toggleMission(missionId) {
+    const updatedMissions = missions.map((mission) => {
+      if (mission.id === missionId) {
+        return {
+          ...mission,
+          completed: !mission.completed,
+        };
+      }
+      return mission;
+    });
+    setMissions(updatedMissions);
+  }
+
+  const completedMissions = missions.filter((mission) => mission.completed);
+
+  const completedMissionsCount = completedMissions.length;
+
+  const earnedXp = completedMissions.reduce(
+    (total, mission) => total + mission.xp,
+    0,
+  );
+
+  const summaryData = [
+    {
+      id: 1,
+      title: "Missões",
+      value: completedMissionsCount,
+      description: `${missions.length} Missões Disponíveis`,
+    },
+    {
+      id: 2,
+      title: "Projetos",
+      value: 3,
+      description: "Projetos Cadastrados",
+    },
+    {
+      id: 3,
+      title: "Tecnologias",
+      value: 7,
+      description: "Tecnologias Praticadas",
+    },
+    {
+      id: 4,
+      title: "Objetivos",
+      value: 6,
+      description: "Objetivos Estabelecidos",
+    },
+    {
+      id: 5,
+      title: "XP",
+      value: earnedXp,
+      description: "Experiência Acumulada",
+    },
+  ];
+
+  return (
     <main className="app">
       <Header />
       <div className="dashboard">
@@ -104,11 +129,38 @@ function App(){
           </div>
         </section>
 
+        <section className="missions-section">
+          <div className="section-heading">
+            <div>
+              <p className="section-heading__tag">Central de Missões</p>
+
+              <h2>Próximos Desafios</h2>
+            </div>
+
+            <span> {missions.length} missões</span>
+          </div>
+
+          <div className="missions-grid">
+            {missions.map((mission) => (
+              <MissionCard
+                key={mission.id}
+                title={mission.title}
+                description={mission.description}
+                technology={mission.technology}
+                difficulty={mission.difficulty}
+                xp={mission.xp}
+                completed={mission.completed}
+                onToggle={() => toggleMission(mission.id)}
+              />
+            ))}
+          </div>
+        </section>
+
         <Welcome />
       </div>
       <Footer />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
