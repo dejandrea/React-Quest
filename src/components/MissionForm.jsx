@@ -1,13 +1,23 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import "./MissionForm.css";
 
 
-function MissionForm({ onAddMission }) {
+function MissionForm({ onAddMission, editingMission, onUpdateMission }) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [technology, setTechnology] = useState("React");
     const [difficulty, setDifficulty] = useState("Fácil");
     const [xp, setXp] = useState(50);
+
+    useEffect(()=>{
+        if(editingMission){
+            setTitle(editingMission.title)
+            setDescription(editingMission.description)
+            setTechnology(editingMission.technology)
+            setDifficulty(editingMission.difficulty)
+            setXp(editingMission.xp)
+        }
+    },[editingMission])
 
     function handleSubmit(event){
         event.preventDefault()
@@ -27,7 +37,17 @@ function MissionForm({ onAddMission }) {
             completed:false,
         }
 
-        onAddMission(newMission)
+        if(editingMission){
+           onUpdateMission({
+            ...newMission,
+            id: editingMission.id,
+            completed: editingMission.completed
+           }) 
+        }else{
+           onAddMission(newMission) 
+        }
+
+        
 
         setTitle("")
         setDescription("")
@@ -103,7 +123,7 @@ function MissionForm({ onAddMission }) {
                     />
                 </div>
                 <button className="mission-form__button" type="submit">
-                    Adicionar missão
+                    {editingMission ? "Salvar Alterações" : "Adicionar Missão"}
                 </button>
             </form>
 
