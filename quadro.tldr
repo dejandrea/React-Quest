@@ -43,6 +43,14 @@
 			"typeName": "pointer"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"z": 1,
+			"meta": {},
+			"id": "camera:page:-vUDBbG7a6Z-OSPLBsyPP",
+			"typeName": "camera"
+		},
+		{
 			"meta": {},
 			"id": "page:rf2PI6fiYOW15mAlguvZU",
 			"name": "Aula 4",
@@ -230,12 +238,61 @@
 			"typeName": "camera"
 		},
 		{
+			"meta": {},
+			"id": "page:-vUDBbG7a6Z-OSPLBsyPP",
+			"name": "Aula 6",
+			"index": "a4Dav",
+			"typeName": "page"
+		},
+		{
+			"x": 407.2222900390625,
+			"y": 212.44357585906982,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Hf3JBGs9DxoFh99Z1JrH4",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 369.6805419921875,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "esse texto tem o texto (REact -> react)"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:-vUDBbG7a6Z-OSPLBsyPP",
+			"index": "a3VZz",
+			"typeName": "shape"
+		},
+		{
 			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
 				"shape:h4DE4ayGflyODUF08HHP4"
 			],
-			"hoveredShapeId": null,
+			"hoveredShapeId": "shape:h4DE4ayGflyODUF08HHP4",
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -361,9 +418,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 90.9427261352539,
-			"y": -30.666671752929688,
-			"z": 1,
+			"x": 110.89580886087121,
+			"y": -3.555413312649833,
+			"z": 0.8621953888675773,
 			"meta": {},
 			"id": "camera:page:rf2PI6fiYOW15mAlguvZU",
 			"typeName": "camera"
@@ -374,6 +431,48 @@
 			"name": "Aula 3",
 			"index": "a21cb",
 			"typeName": "page"
+		},
+		{
+			"x": 63.298614501953125,
+			"y": 91.20659637451172,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:WePKV6kMgTPh9rDPcUrP7",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 703.9930419921875,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1.0913373314978219,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "(mission)=>        mission.title.toLowerCase().includes(searchTerm.toLowerCase())"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:-vUDBbG7a6Z-OSPLBsyPP",
+			"index": "a1vQn",
+			"typeName": "shape"
 		},
 		{
 			"meta": {},
@@ -392,11 +491,13 @@
 		{
 			"followingUserId": null,
 			"opacityForNextShape": 1,
-			"stylesForNextShape": {},
+			"stylesForNextShape": {
+				"tldraw:size": "s"
+			},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "move",
+				"type": "default",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -406,8 +507,8 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 1006,
-				"h": 566
+				"w": 1007.7777099609375,
+				"h": 443.33331298828125
 			},
 			"insets": [
 				false,
@@ -422,7 +523,7 @@
 			"isChatting": false,
 			"highlightedUserIds": [],
 			"isFocused": true,
-			"devicePixelRatio": 1.5,
+			"devicePixelRatio": 1.8000000715255737,
 			"isCoarsePointer": false,
 			"isHoveringCanvas": true,
 			"openMenus": [],
@@ -432,7 +533,7 @@
 			"duplicateProps": null,
 			"cameraState": "idle",
 			"id": "instance:instance",
-			"currentPageId": "page:rf2PI6fiYOW15mAlguvZU",
+			"currentPageId": "page:-vUDBbG7a6Z-OSPLBsyPP",
 			"typeName": "instance"
 		},
 		{
@@ -476,6 +577,21 @@
 			"parentId": "page:bh3SHVP0w1SFezU_XlvTu",
 			"index": "a2OqM",
 			"typeName": "shape"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:Hf3JBGs9DxoFh99Z1JrH4"
+			],
+			"hoveredShapeId": "shape:Hf3JBGs9DxoFh99Z1JrH4",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:-vUDBbG7a6Z-OSPLBsyPP",
+			"pageId": "page:-vUDBbG7a6Z-OSPLBsyPP",
+			"typeName": "instance_page_state"
 		},
 		{
 			"x": -46.950347900390625,
@@ -607,6 +723,55 @@
 			},
 			"parentId": "page:page",
 			"index": "a1zD5",
+			"typeName": "shape"
+		},
+		{
+			"x": 51.111122131347656,
+			"y": 173.5546751022339,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ZTKL2-y0-jaXkpNQacE73",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 640.861083984375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Criar a Central de Missões -> criar a central de missões"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:-vUDBbG7a6Z-OSPLBsyPP",
+			"index": "a2zco",
 			"typeName": "shape"
 		}
 	]
