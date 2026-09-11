@@ -187,6 +187,12 @@ function App() {
             technologyFilter = {technologyFilter}
             onTechnologyChange = {setTechnologyFilter}
           />
+
+          <p className="mission-results">
+            {filteredMissions.length}
+            {" "}
+            {filteredMissions.length === 1 ? "Missão Encontrada" : "Missões Encontradas"}
+          </p>
           <div className="section-heading">
             <div>
               <p className="section-heading__tag">Central de Missões</p>
