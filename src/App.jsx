@@ -116,6 +116,8 @@ function App() {
     }
   )
 
+  const sortedMissions = [...filteredMissions].sort((a, b) => b.xp - a.xp)
+
   const summaryData = [
     {
       id: 1,
@@ -210,7 +212,17 @@ function App() {
           </div>
 
           <div className="missions-grid">
-            {filteredMissions.map((mission) => (
+            {sortedMissions.length === 0
+            ? 
+            ( 
+            <div className="empty-state">
+              <h3>Nenhuma missão encontrada</h3>
+
+              <p>Tente alterar sua busca ou seus filtros.</p>
+            </div>
+            )
+            :
+            (sortedMissions.map((mission) => (
               <MissionCard
                 key={mission.id}
                 title={mission.title}
@@ -223,7 +235,7 @@ function App() {
                 onDelete={()=> deleteMission(mission.id)}
                 onEdit={()=> setEditingMission(mission)}
               />
-            ))}
+            )))}
           </div>
         </section>
 
