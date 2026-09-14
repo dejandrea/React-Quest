@@ -4,7 +4,9 @@ function MissionFilters({
     statusFilter, 
     onStatusChange, 
     technologyFilter, 
-    onTechnologyChange 
+    onTechnologyChange,
+    difficultyFilter,
+    onDifficultyChange
 }) {
     return(
         <section className="mission-filters">
@@ -37,6 +39,18 @@ function MissionFilters({
                     <option value="Git">Git</option>
                     <option value="IA">IA</option>
                     <option value="Debug">Debug</option>
+                </select>
+                {/* Dificuldade */}
+                <label htmlFor="difficulty-filter">Dificuldade</label>
+                <select
+                    id="difficulty-filter"
+                    value={difficultyFilter}
+                    onChange={(e) => onDifficultyChange(e.target.value)}
+                >
+                    <option value="Todas">Todas</option>
+                    <option value="Fácil">Fácil</option>
+                    <option value="Média">Média</option>
+                    <option value="Difícil">Difícil</option>
                 </select>
             </div>
         </section>
