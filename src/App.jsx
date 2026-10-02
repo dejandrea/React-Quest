@@ -175,7 +175,7 @@ function App() {
     {
       id: 2,
       title: "Projetos",
-      value: 3,
+      value: projects.length,
       description: "Projetos Cadastrados",
     },
     {
@@ -295,6 +295,12 @@ function App() {
               <span className="section-eyebrow">Portfólio</span>
 
               <h2>Central de Projetos</h2>
+
+              <p className="projects-count">
+                {projects.length}
+                {" "}
+                {projects.length === 1 ? "Projeto Cadastrado" : "Projetos Cadastrados"}
+              </p>
 
               <p>
                 Projetos construídos durante sua jornada como desenvolvedor.
