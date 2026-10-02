@@ -10,6 +10,7 @@ import MissionForm from "./components/MissionForm";
 import MissionSearch from "./components/MissionSearch";
 import MissionFilters from "./components/MissionFilters";
 import ProjectCard from "./components/ProjectCard";
+import ProjectForm from "./components/ProjectForm";
 
 const initialMissions = [
   {
@@ -87,8 +88,9 @@ function App() {
   const [technologyFilter, setTechnologyFilter] = useState("Todas");
   const [difficultyFilter, setDifficultyFilter] = useState("Todas");
   const [sortOrder, setSortOrder] = useState("Maior XP");
+  const [projects, setProjects] = useState(initialProjects);
 
-  console.log(statusFilter);
+  // console.log(statusFilter);
   function toggleMission(missionId) {
     const updatedMissions = missions.map((mission) => {
       if (mission.id === missionId) {
@@ -120,6 +122,10 @@ function App() {
     setMissions(updatedMissions);
     setEditingMission(null);
   }
+
+  function addProject(newProject){
+    setProjects([...projects, newProject]);
+  } 
 
   const completedMissions = missions.filter((mission) => mission.completed);
 
@@ -294,11 +300,15 @@ function App() {
                 Projetos construídos durante sua jornada como desenvolvedor.
               </p>
             </div>
-          </div>   
+          </div>  
+            
+          <ProjectForm 
+            onAddProject={addProject} 
+          />
 
           <div className="projects-grid">
             {
-              initialProjects.map((project) => (
+              projects.map((project) => (
                 <ProjectCard
                   key={project.id}
                   title={project.title}
