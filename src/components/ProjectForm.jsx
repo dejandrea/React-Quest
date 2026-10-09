@@ -6,6 +6,8 @@ function ProjectForm({ onAddProject, editingProject, onUpdateProject }) {
     const [description, setDescription] = useState("");
     const [technologies, setTechnologies] = useState("");
     const [status, setStatus] = useState("Em andamento");
+    const [githubUrl, setGithubUrl] = useState("");
+    const [deployUrl, setDeployUrl] = useState("");
 
     useEffect(() => {
         if (editingProject) {
@@ -13,6 +15,8 @@ function ProjectForm({ onAddProject, editingProject, onUpdateProject }) {
             setDescription(editingProject.description);
             setTechnologies(editingProject.technologies.join(", "));
             setStatus(editingProject.status);
+            setGithubUrl(editingProject.githubUrl || "");
+            setDeployUrl(editingProject.deployUrl || "");
         }
     }, [editingProject]);
 
@@ -23,12 +27,21 @@ function ProjectForm({ onAddProject, editingProject, onUpdateProject }) {
             alert("Por favor, preencha todos os campos.");
             return;
         }
+
+        if((githubUrl && !githubUrl.startsWith("http://") && !githubUrl.startsWith("https://")) ||
+         (deployUrl && !deployUrl.startsWith("http://") && !deployUrl.startsWith("https://"))) {
+            alert("Por favor, insira um link válido. Os links devem começar com http:// ou https://");
+            return;
+        }
+        
         const newProject = {
             id: Date.now(),
             title: title.trim(),
             description: description.trim(),
             technologies: technologies.split(",").map((tech)=> tech.trim() ),
             status: status,
+            githubUrl: githubUrl,
+            deployUrl: deployUrl,
         };
 
         if (editingProject) {
@@ -44,6 +57,8 @@ function ProjectForm({ onAddProject, editingProject, onUpdateProject }) {
         setDescription("");
         setTechnologies("");
         setStatus("Em andamento");
+        setGithubUrl("");
+        setDeployUrl("");
     }
 
     return (
@@ -90,6 +105,24 @@ function ProjectForm({ onAddProject, editingProject, onUpdateProject }) {
                         <option value="Em andamento">Em andamento</option>
                         <option value="Concluído">Concluído</option>
                     </select>
+                </div>
+                <div className="project-form__group">
+                    <label htmlFor="project-github-url">URL do GitHub</label>
+                    <input
+                        id="project-github-url"
+                        type="text"
+                        value={githubUrl}
+                        onChange={(event) => setGithubUrl(event.target.value)}
+                    />
+                </div>
+                <div className="project-form__group">
+                    <label htmlFor="project-deploy-url">URL do deploy</label>
+                    <input
+                        id="project-deploy-url"
+                        type="text"
+                        value={deployUrl}
+                        onChange={(event) => setDeployUrl(event.target.value)}
+                    />
                 </div>
                 <button className="project-form__button" type="submit">
                     {editingProject ? "Salvar Alterações" : "Adicionar Projeto"}

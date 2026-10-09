@@ -61,7 +61,9 @@ const initialProjects = [
       "OpenCV",
       "MediaPipe"
     ],
-    status:"Concluído"
+    status:"Concluído",
+    githubUrl:"https://github.com/profAndreaFranca/Aula-Python-Desenho-com-Gestos-parte-2---CodeMinds.git",
+    deployUrl:""
   },
    {
     id: 2,
@@ -69,6 +71,8 @@ const initialProjects = [
     description: "Jogo desenvolvido em Python com detecção e interação.",
     technologies: ["Python", "Pygame"],
     status: "Concluído",
+    githubUrl: "https://github.com/profAndreaFranca/Aula-Python---Detector-de-Invasores---Gabarito.git",
+    deployUrl: ""
   },
   {
     id: 3,
@@ -77,6 +81,8 @@ const initialProjects = [
       "Loja virtual que utiliza inteligência artificial para auxiliar o usuário.",
     technologies: ["Python", "Flask", "HTML", "CSS"],
     status: "Concluído",
+    githubUrl: "https://github.com/seu-usuario/loja-virtual-com-ia",
+    deployUrl: "https://loja-virtual-com-ia.netlify.app"
   },
 ]
 
@@ -188,6 +194,10 @@ function App() {
     return b.xp - a.xp; //maior para o menor
   });
 
+  const technologiesCount = new Set(
+    projects.flatMap((project) => project.technologies).filter(Boolean),
+  ).size;
+
   const summaryData = [
     {
       id: 1,
@@ -204,7 +214,7 @@ function App() {
     {
       id: 3,
       title: "Tecnologias",
-      value: 7,
+      value: technologiesCount,
       description: "Tecnologias Praticadas",
     },
     {
@@ -346,6 +356,8 @@ function App() {
                   description={project.description}
                   technologies={project.technologies}
                   status={project.status}
+                  githubUrl={project.githubUrl}
+                  deployUrl={project.deployUrl}
                   onEdit={() => setEditingProject(project)}
                   onDelete={() => deleteProject(project.id)}
                 />
