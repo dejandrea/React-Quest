@@ -84,6 +84,16 @@ const initialProjects = [
     githubUrl: "https://github.com/seu-usuario/loja-virtual-com-ia",
     deployUrl: "https://loja-virtual-com-ia.netlify.app"
   },
+  {
+    id: 4,
+    title: "React Quest",
+    description:
+      "Plataforma de aprendizado para devs em React com missões, projetos e gamificação.",
+    technologies: ["Vite", "React", "HTML", "CSS", "JavaScript"],
+    status: "Em andamento",
+    githubUrl: "https://github.com/profAndreaFranca/React-Quest--Completo.git",
+    deployUrl: "https://react-quest-completo.vercel.app/"
+  },
 ]
 
 function App() {
