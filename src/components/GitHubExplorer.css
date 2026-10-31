@@ -19,15 +19,22 @@
   border: 1px solid #666;
 }
 
-.github-explorer__form button {
+.github-explorer__form button,
+.github-explorer__load-more {
   padding: 12px 18px;
   border: 0;
   border-radius: 10px;
   cursor: pointer;
 }
-.github-explorer__form button:disabled {
+.github-explorer__form button:disabled,
+.github-explorer__load-more:disabled {
   opacity: 0.6;
   cursor: wait;
+}
+
+.github-explorer__load-more {
+  display: block;
+  margin: 24px auto 0;
 }
 
 .github-repositories {

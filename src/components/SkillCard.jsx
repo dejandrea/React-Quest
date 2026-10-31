@@ -1,7 +1,7 @@
 import "./SkillCard.css";
 
 function SkillCard({ technology, xp }) {
-	const progress = Math.max(0, Math.min((xp / 200) * 100, 100));
+	const progress = Math.max(0, Math.min((xp / 500) * 100, 100));
 
 	return (
 		<article className="skill-card">

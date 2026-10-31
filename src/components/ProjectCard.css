@@ -25,6 +25,19 @@
   margin: 0;
   line-height: 1.5;
   opacity: 0.75;
+  overflow-wrap: anywhere;
+}
+
+.project-card__description-toggle {
+  align-self: flex-start;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .project-card__technologies {
